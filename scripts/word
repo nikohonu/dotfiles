@@ -1,0 +1,5 @@
+#!/bin/zsh
+WORD=$(xclip -o -selection clipboard)
+echo "https://ssl.gstatic.com/dictionary/static/sounds/oxford/"$WORD"--_us_1.mp3" > text
+xclip -i -selection c text
+rm text

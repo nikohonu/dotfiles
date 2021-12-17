@@ -1,0 +1,20 @@
+#!/bin/sh -e
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+screenshot_folder=$HOME/pictures/screenshots/$(date +"%Y-%m")
+screenshot_name=$screenshot_folder/$(date +"%Y-%m-%dT%H_%M_%S.png")
+mkdir -p $screenshot_folder
+if [ "$1" ]; then
+    if [ "$1" == "1" ]; then
+        selection=1920x1080+0+0 
+    elif [ "$1" == "2" ]; then
+        selection=1920x1080+1920+0
+    elif [ "$1" == "region" ]; then
+        selection=$(hacksaw -f "%g")
+    fi
+    shotgun -g $selection $screenshot_name
+else
+    shotgun $screenshot_name
+fi
+
+xclip -selection clipboard -t image/png -i $screenshot_name
+notify-send --category=transfer.complete "screenshot taken ${screenshot_name//$HOME/\~}"

@@ -5,7 +5,7 @@ SAVEHIST=10000
 setopt autocd
 bindkey -v
 
-zstyle :compinstall filename '/home/nikohonu/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 autoload -U colors && colors
