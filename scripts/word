@@ -1,5 +1,6 @@
 #!/bin/zsh
 WORD=$(xclip -o -selection clipboard)
-echo "https://ssl.gstatic.com/dictionary/static/sounds/oxford/"$WORD"--_us_1.mp3" > text
-xclip -i -selection c text
-rm text
+echo "https://ssl.gstatic.com/dictionary/static/sounds/oxford/"$WORD"--_us_1.mp3" | xclip -selection clipboard -i
+sleep 0.25
+xdotool key ctrl+v
+echo $WORD | xclip -selection clipboard -i

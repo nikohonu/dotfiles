@@ -65,8 +65,7 @@ def main():
     photos_path = pictures_path / 'photos'
     screenshots_path = pictures_path / 'screenshots'
     telegram_path = pictures_path / 'NekoX'
-    wallpapers_desktop_path = pictures_path / 'wallpapers' / 'desktop'
-    wallpapers_android_path = pictures_path / 'wallpapers' / 'android'
+    wallpapers_path = pictures_path / 'wallpapers'
 
     # Avatars
     avatars_files = get_files(avatars_path, ['.png'])
@@ -82,23 +81,14 @@ def main():
             (hf.get_sha256(dakimakura_file) + dakimakura_file.suffix)
         move_file(dakimakura_file, new_path)
     
-    # Desktop wallpapers
-    wallpapers_desktop_files = get_files(wallpapers_desktop_path, ['.png', '.jpg'])
-    for wallpapers_desktop_file in wallpapers_desktop_files:
-        new_path = wallpapers_desktop_path / \
-            (hf.get_sha256(wallpapers_desktop_file) + wallpapers_desktop_file.suffix)
-        if wallpapers_desktop_file != new_path:
-            print(wallpapers_desktop_file, new_path)
-            move_file(wallpapers_desktop_file, new_path)
-
-    # Android wallpapers
-    wallpapers_android_files = get_files(wallpapers_android_path, ['.png', '.jpg'])
-    for wallpapers_android_file in wallpapers_android_files:
-        new_path = wallpapers_android_path / \
-            (hf.get_sha256(wallpapers_android_file) + wallpapers_android_file.suffix)
-        if wallpapers_android_file != new_path:
-            print(wallpapers_android_file, new_path)
-            move_file(wallpapers_android_file, new_path)
+    # wallpapers
+    wallpapers_files = get_files(wallpapers_path, ['.png', '.jpg'])
+    for wallpapers_file in wallpapers_files:
+        new_path = wallpapers_path / \
+            (hf.get_sha256(wallpapers_file) + wallpapers_file.suffix)
+        if wallpapers_file != new_path:
+            print(wallpapers_file, new_path)
+            move_file(wallpapers_file, new_path)
 
     # Nika
     nika_files = get_files(nika_path, ['.png', '.jpg'])

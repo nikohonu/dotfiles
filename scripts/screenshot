@@ -16,5 +16,5 @@ else
     shotgun $screenshot_name
 fi
 
-xclip -selection clipboard -t image/png -i $screenshot_name
-notify-send --category=transfer.complete "screenshot taken ${screenshot_name//$HOME/\~}"
+echo "file://$screenshot_name" | xclip -i -selection clipboard -t text/uri-list
+ notify-send --category=transfer.complete "screenshot taken ${screenshot_name//$HOME/\~}"

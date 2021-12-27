@@ -1,6 +1,5 @@
 #!/bin/zsh
 DOTFILES=$(realpath $(dirname "$0"))
-echo $DOTFILES
 
 install () {
     FILE="$DOTFILES/$1"
@@ -12,10 +11,12 @@ install () {
 
 install .zshrc 
 install .zprofile
+install scripts
 
 if [[ $(hostnamectl hostname) == arch0 ]]
 then
     install .xinitrc
+    install .config/qtile
 fi
 
 if [[ $(hostnamectl hostname) == arch1 ]]

@@ -26,20 +26,20 @@ bindkey '^[[B' history-substring-search-down
 
 # aliases
 alias cal='cal -m'
-alias cn='nvim ~/documents/notes.md'
-alias cqt="code ~/.config/qtile/config.py"
-alias cas="code ~/.config/qtile/autostart.sh"
+alias en='nvim ~/documents/notes.md'
+alias eqt="$EDITOR ~/.config/qtile/config.py"
+alias eas="$EDITOR ~/.config/qtile/autostart.sh"
 alias f2clip="xclip -sel clip <"
 
-alias rzshrc='source ~/.zshrc'
-alias ezshrc='$EDITOR ~/.zshrc'
-alias ezprofile='$EDITOR ~/.zprofile'
+alias rzsh='source ~/.zshrc'
+alias ezsh="$EDITOR ~/.zshrc"
+alias ezprofile="$EDITOR ~/.zprofile"
 
 alias t='topydo -t ~/.local/share/topydo/todo.txt -d ~/.local/share/topydo/done.txt'
 alias td='t do'
 alias tall='t ls -g due'
 alias tt='t ls due:=today'
-alias ct='code ~/.local/share/topydo/todo.txt'
+alias et="$EDITOR ~/.local/share/topydo/todo.txt"
 
 alias pain='paup; paru -S'
 alias pare='paru -Rncs'
