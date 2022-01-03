@@ -29,7 +29,6 @@ from typing import List  # noqa: F401
 from libqtile import bar, layout, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
 
 import os
 import subprocess
@@ -76,12 +75,13 @@ keys = [
 
     Key([mod], "f", lazy.window.toggle_floating(), desc='Toggle floating'),
     Key([mod], "w", lazy.spawn(browser), desc="Launch browser"),
-    Key([mod], "p", lazy.spawn(launcher), desc="Launch launcher"),
+    Key([mod], "d", lazy.spawn(launcher), desc="Launch launcher"),
     Key([mod], "e", lazy.spawn(file_manager), desc="Launch file manager"),
     Key([mod, "shift"], "s", lazy.spawn("screenshot region"), desc="Make screenshot of screen's region"),
     Key([mod], "q", lazy.spawn("lock.sh"), desc="Lock"),
     Key([mod], "v", lazy.spawn("word"), desc="Word to audio"),
     Key([mod], "c", lazy.spawn("recordAudioToggle"), desc="Record audio"),
+    Key([mod], "p", lazy.spawn("ports"), desc="Change audio port"),
 ]
 
 groups = [
@@ -95,7 +95,6 @@ groups = [
         Match(wm_class="pcmanfm-qt"),
     ]),
     Group("4", matches=[
-        Match(wm_class="code-oss"),
         Match(title="User 1 - Anki")
     ]),
     Group("5", matches=[
@@ -104,7 +103,7 @@ groups = [
     Group("6", matches=[
         Match(wm_class="mpv"),
     ]),
-    Group("7"),
+    Group("7", matches=[Match(wm_class='TelegramDesktop'), Match(wm_class='discord')]),
     Group("8"),
     Group("9"),
 ]
