@@ -35,7 +35,7 @@ import subprocess
 
 mod = "mod4"
 terminal = "kitty"
-browser = "firefox"
+browser = "librewolf"
 launcher = "rofi -show drun"
 file_manager = "pcmanfm-qt"
 
@@ -78,6 +78,8 @@ keys = [
     Key([mod], "d", lazy.spawn(launcher), desc="Launch launcher"),
     Key([mod], "e", lazy.spawn(file_manager), desc="Launch file manager"),
     Key([mod, "shift"], "s", lazy.spawn("screenshot region"), desc="Make screenshot of screen's region"),
+    Key([mod, "control"], "1", lazy.spawn("screenshot 1"), desc="Make screenshot of left screen"),
+    Key([mod, "control"], "2", lazy.spawn("screenshot 2"), desc="Make screenshot of right screen"),
     Key([mod], "q", lazy.spawn("lock.sh"), desc="Lock"),
     Key([mod], "v", lazy.spawn("word"), desc="Word to audio"),
     Key([mod], "c", lazy.spawn("recordAudioToggle"), desc="Record audio"),
@@ -86,13 +88,17 @@ keys = [
 
 groups = [
     Group("1", matches=[
-        Match(wm_class="kitty")
+        Match(wm_class="kitty"),
+        Match(wm_class="mpv"),
     ]),
     Group("2", matches=[
-        Match(wm_class="firefox"), Match(title="Add")
+        Match(wm_class="LibreWolf"),
+        Match(title="Add")
     ]),
     Group("3", matches=[
         Match(wm_class="pcmanfm-qt"),
+        Match(wm_class="superProductivity")
+
     ]),
     Group("4", matches=[
         Match(title="User 1 - Anki")
@@ -101,7 +107,6 @@ groups = [
         Match(wm_class="qBittorrent"),
     ]),
     Group("6", matches=[
-        Match(wm_class="mpv"),
     ]),
     Group("7", matches=[Match(wm_class='TelegramDesktop'), Match(wm_class='discord')]),
     Group("8"),
@@ -226,3 +231,24 @@ wmname = "Qtile"
 def autostart():
     home = os.path.expanduser('~')
     subprocess.Popen([home + '/.config/qtile/autostart.sh'])
+
+def _bar(qtile):
+    # Get the bar 
+    bar = qtile.current_screen.bottom
+    # Check the layout and hide bar accordingly
+    if(qtile.current_layout.info()['name'] == 'max'):
+        bar.show(False)
+    else:
+        bar.show(True)
+
+@hook.subscribe.layout_change
+def layout_change(layout,group):
+    _bar(qtile)
+
+@hook.subscribe.changegroup
+def group_change():
+    _bar(qtile)
+
+@hook.subscribe.client_focus
+def focus_change(window):
+    _bar(qtile)

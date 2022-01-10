@@ -38,6 +38,7 @@ def move_file(old_path, new_path):
         old_path.unlink()
         print('File already exist')
     else:
+        print(new_path.parent)
         new_path.parent.mkdir(parents=True, exist_ok=True)
         new_path.write_bytes(old_path.read_bytes())
         old_path.unlink()
