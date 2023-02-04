@@ -1,2 +1,0 @@
-#!/bin/sh
-xinput set-prop 15 --type=float "Coordinate Transformation Matrix" 0.5 0 0 0 1 0 0 0 1

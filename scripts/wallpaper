@@ -1,9 +1,0 @@
-#!/bin/zsh
-image_path="$HOME/media/pictures/wallpapers/desktop"
-lock_path="/tmp/lock.png"
-
-wallpapers=($(ls $image_path | shuf -n 2))
-wallpapers_lock=($(ls $image_path | shuf -n 2))
-
-DISPLAY=:0.0 feh --bg-fill $image_path"/${wallpapers[1]}" --bg-fill $image_path"/${wallpapers[2]}"
-gm convert $image_path"/${wallpapers_lock[1]}" $image_path"/${wallpapers_lock[2]}" +append "$lock_path"
