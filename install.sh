@@ -5,9 +5,10 @@ install() {
 	path_in=$current_path/$1
 	path_out=$HOME/$1
 	parent_path=$(dirname "$path_out")
-	echo "ln -s $path_in $path_out"
+	echo "ln -sf $path_in $path_out"
+    rm -rf "$path_out"
 	mkdir -p $parent_path
-	ln -sf "$path_in" "$path_out"
+	ln -s "$path_in" "$path_out"
 }
 
 install .bashrc
