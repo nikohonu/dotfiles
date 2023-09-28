@@ -19,6 +19,5 @@ install .bash_profile
 install .config/nvim/init.lua
 install .config/nvim/lua
 
-# bspwm
-install .config/bspwm
-install .config/sxhkd
+# font
+install .config/fontconfig

@@ -24,3 +24,5 @@ roll () {
 
 # PS1
 PS1='[\u@\h \W]\$ '
+
+source /home/nikohonu/.bash_completions/fjt.sh

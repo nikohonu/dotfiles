@@ -1,16 +1,22 @@
 # Niko Honu's dotfiles
 
-## Bash
+## Currently in use
+### Bash
 
 - ~/.bashrc
 - ~/.bash_profile
 
-## Neovim
+### Neovim
 
 - ~/.config/nvim/init.lua
 - ~/.config/nvim/lua
 
-## bspwm
+### Fonts config
+
+- ~/.config/fonts
+
+## Not currently in use
+### bspwm
 
 - ~/.config/bspwm
 - ~/.config/sxhkd

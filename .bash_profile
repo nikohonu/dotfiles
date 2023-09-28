@@ -1,4 +1,4 @@
-#
+
 # ~/.bash_profile
 #
 
@@ -15,7 +15,7 @@ set_path() {
 }
 
 # path
-set_path ~/.cargo/bin ~/.local/bin ~/scripts
+set_path ~/.cargo/bin ~/.local/bin ~/scripts ~/.yarn/bin
 
 # general
 export EDITOR=nvim
@@ -30,7 +30,10 @@ export GLFW_IM_MODULE=ibus
 # themes
 export QT_QPA_PLATFORMTHEME=qt6ct
 
+# wayland
+export MOZ_ENABLE_WAYLAND=1
+
 # startx
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
-fi
+#if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ]; then
+#  exec startx
+#fi

@@ -17,9 +17,11 @@ vim.opt.colorcolumn = "80"
 
 -- shortcuts
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 vim.keymap.set("n", "<leader>.", vim.cmd.Ex)
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+vim.keymap.set("n", "<leader><BS>", ":bprevious<CR>")
 
 -- catppuccin
 require("catppuccin").setup({

@@ -29,3 +29,5 @@ xsetroot -cursor_name left_ptr
 
 dex -a &
 polybar &
+dunst &
+clipmenud &
