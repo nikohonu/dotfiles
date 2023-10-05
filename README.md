@@ -15,6 +15,20 @@
 
 - ~/.config/fonts
 
+### Hyprland
+
+- ~/.config/hypr/
+
+### Waybar
+
+- ~/.config/waybar
+
+### mpv
+
+- ~/.config/mpv/mpv.conf
+- ~/.config/mpv/input.conf
+- ~/.config/mpv/script-opts
+
 ## Not currently in use
 ### bspwm
 

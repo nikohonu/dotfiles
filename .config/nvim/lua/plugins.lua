@@ -19,6 +19,9 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    use("mickael-menu/zk-nvim")
+    use("tpope/vim-repeat")
+    use("ggandor/leap.nvim")
     -- pyright
     -- use {'averms/black-nvim', run = ':UpdateRemotePlugins'}
     -- use {'stsewd/isort.nvim', run = ':UpdateRemotePlugins'}

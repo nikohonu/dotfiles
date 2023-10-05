@@ -98,17 +98,20 @@ lspconfig.pylsp.setup {
     }
 }
 
-lspconfig.marksman.setup {
-    capabilities = capabilities,
-}
+-- lspconfig.marksman.setup {
+--     capabilities = capabilities,
+-- }
+-- lspconfig.zk.setup {
+--     capabilities = capabilities,
+-- }
 
-lspconfig.lua_ls.setup {
-    capabilities = capabilities,
-}
+-- lspconfig.lua_ls.setup {
+--     capabilities = capabilities,
+-- }
 
-lspconfig.bashls.setup {
-    capabilities = capabilities,
-}
+-- lspconfig.bashls.setup {
+--     capabilities = capabilities,
+-- }
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -151,3 +154,29 @@ require("nvim-treesitter.configs").setup {
 -- telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>p', builtin.find_files, {})
+
+-- zk
+require("zk").setup({
+  -- can be "telescope", "fzf" or "select" (`vim.ui.select`)
+  -- it's recommended to use "telescope" or "fzf"
+  picker = "telescope",
+
+  lsp = {
+    -- `config` is passed to `vim.lsp.start_client(config)`
+    config = {
+      cmd = { "zk", "lsp" },
+      name = "zk",
+      -- on_attach = ...
+      -- etc, see `:h vim.lsp.start_client()`
+    },
+
+    -- automatically attach buffers in a zk notebook that match the given filetypes
+    auto_attach = {
+      enabled = true,
+      filetypes = { "markdown" },
+    },
+  },
+})
+
+-- leap.nvim
+require('leap').add_default_mappings()

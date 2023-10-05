@@ -19,5 +19,20 @@ install .bash_profile
 install .config/nvim/init.lua
 install .config/nvim/lua
 
+# hyprland
+install .config/hypr
+
+# waybar
+install .config/waybar
+
+# mpv
+install .config/mpv/input.conf
+install .config/mpv/mpv.conf
+install .config/mpv/script-opts
+
 # font
 install .config/fontconfig
+
+# bspwm
+# install .config/bspwm
+# install .config/sxhkd/

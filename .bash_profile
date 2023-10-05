@@ -34,6 +34,6 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 export MOZ_ENABLE_WAYLAND=1
 
 # startx
-#if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ]; then
-#  exec startx
-#fi
+# if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ]; then
+#  exec Hyprland
+# fi
