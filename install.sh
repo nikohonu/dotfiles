@@ -22,8 +22,9 @@ install .config/nvim/lua
 # hyprland
 install .config/hypr
 
-# waybar
+# Bars
 install .config/waybar
+# install .config/polybar
 
 # mpv
 install .config/mpv/input.conf
@@ -32,6 +33,9 @@ install .config/mpv/script-opts
 
 # font
 install .config/fontconfig
+
+# autostart
+install .config/autostart
 
 # bspwm
 # install .config/bspwm

@@ -1,0 +1,4 @@
+[Desktop Entry]
+Exec=/usr/bin/dunst
+Name=dunst
+Type=Application
