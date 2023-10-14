@@ -24,7 +24,7 @@ install .config/hypr
 
 # Bars
 install .config/waybar
-# install .config/polybar
+install .config/polybar
 
 # mpv
 install .config/mpv/input.conf
@@ -38,5 +38,5 @@ install .config/fontconfig
 install .config/autostart
 
 # bspwm
-# install .config/bspwm
-# install .config/sxhkd/
+install .config/bspwm
+install .config/sxhkd

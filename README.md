@@ -19,9 +19,15 @@
 
 - ~/.config/hypr/
 
-### Waybar
+### bspwm
+
+- ~/.config/bspwm
+- ~/.config/sxhkd
+
+### Bars
 
 - ~/.config/waybar
+- ~/.config/polybar
 
 ### mpv
 
@@ -29,14 +35,7 @@
 - ~/.config/mpv/input.conf
 - ~/.config/mpv/script-opts
 
-# Autostart
+### Autostart
 - ~/.config/autostart
 
 ## Not currently in use
-### bspwm
-
-- ~/.config/bspwm
-- ~/.config/sxhkd
-
-### Bars
-- ~/.config/polybar
