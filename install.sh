@@ -11,6 +11,9 @@ install() {
 	ln -s "$path_in" "$path_out"
 }
 
+# xdg-user-dir
+install .config/user-dirs.dirs
+
 # bash
 install .bashrc
 install .bash_profile

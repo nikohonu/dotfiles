@@ -9,7 +9,7 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
-alias c='task calc'
+alias t='termdown'
 alias un7z="7z x"
 alias untar="tar -xfv"
 alias random_task="task | tail -n +4 | head -n -2 | shuf -n 1"
@@ -20,6 +20,10 @@ alias yt-dlp-channel-as-audiobook='yt-dlp --extract-audio --playlist-reverse -o 
 # functions
 roll () {
     shuf -i 1-$1 -n 1
+}
+
+c () {
+    python -c "from math import *; print($1)"
 }
 
 # PS1

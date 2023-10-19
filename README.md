@@ -1,6 +1,10 @@
 # Niko Honu's dotfiles
 
 ## Currently in use
+### xdg-user-dir
+
+- ~/.config/user-dirs.dirs
+
 ### Bash
 
 - ~/.bashrc

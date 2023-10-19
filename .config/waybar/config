@@ -24,7 +24,7 @@
         "locale": "uk_UA.UTF-8",
         "interval": 1,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%A %F %T}",
+        "format": "{:%A (%W) %F %T}",
         "calendar": {
             "mode"          : "year",
             "mode-mon-col"  : 2,
