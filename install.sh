@@ -11,6 +11,9 @@ install() {
 	ln -s "$path_in" "$path_out"
 }
 
+# emacs
+install .config/emacs/init.el
+
 # xdg-user-dir
 install .config/user-dirs.dirs
 
@@ -25,7 +28,7 @@ install .config/nvim/lua
 # hyprland
 install .config/hypr
 
-# Bars
+# bars
 install .config/waybar
 install .config/polybar
 

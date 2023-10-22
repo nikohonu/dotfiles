@@ -31,3 +31,4 @@ dex -a &
 polybar &
 dunst &
 clipmenud &
+xrdb ~/.Xresources &

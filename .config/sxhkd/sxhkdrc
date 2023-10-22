@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + q
-	kitty
+	urxvt
 
 # program launcher
 super + {_, shift +} @space

@@ -1,45 +1,46 @@
 # Niko Honu's dotfiles
 
-## Currently in use
-### xdg-user-dir
+## Emacs
+
+~/.config/emacs/init.el
+
+## xdg-user-dir
 
 - ~/.config/user-dirs.dirs
 
-### Bash
+## Bash
 
 - ~/.bashrc
 - ~/.bash_profile
 
-### Neovim
+## Neovim
 
 - ~/.config/nvim/init.lua
 - ~/.config/nvim/lua
 
-### Fonts config
+## Fonts config
 
 - ~/.config/fonts
 
-### Hyprland
+## Hyprland
 
 - ~/.config/hypr/
 
-### bspwm
+## bspwm
 
 - ~/.config/bspwm
 - ~/.config/sxhkd
 
-### Bars
+## Bars
 
 - ~/.config/waybar
 - ~/.config/polybar
 
-### mpv
+## mpv
 
 - ~/.config/mpv/mpv.conf
 - ~/.config/mpv/input.conf
 - ~/.config/mpv/script-opts
 
-### Autostart
+## Autostart
 - ~/.config/autostart
-
-## Not currently in use
