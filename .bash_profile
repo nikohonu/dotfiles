@@ -1,4 +1,4 @@
-
+#
 # ~/.bash_profile
 #
 
@@ -15,7 +15,7 @@ set_path() {
 }
 
 # path
-set_path ~/.cargo/bin ~/.local/bin ~/scripts ~/.yarn/bin
+set_path ~/.cargo/bin ~/.local/bin ~/scripts ~/.scripts ~/.yarn/bin
 
 # general
 export EDITOR=nvim
@@ -32,8 +32,4 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 
 # wayland
 export MOZ_ENABLE_WAYLAND=1
-
-# startx
-# if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ]; then
-#  exec Hyprland
-# fi
+export OBSIDIAN_USE_WAYLAND=1

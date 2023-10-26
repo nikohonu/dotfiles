@@ -1,5 +1,9 @@
 # Niko Honu's dotfiles
 
+## Scripts
+
+~/scripts
+
 ## Emacs
 
 ~/.config/emacs/init.el
@@ -43,4 +47,5 @@
 - ~/.config/mpv/script-opts
 
 ## Autostart
+
 - ~/.config/autostart

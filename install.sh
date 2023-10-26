@@ -11,6 +11,9 @@ install() {
 	ln -s "$path_in" "$path_out"
 }
 
+# scripts
+install scripts 
+
 # emacs
 install .config/emacs/init.el
 
