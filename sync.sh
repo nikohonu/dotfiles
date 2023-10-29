@@ -1,6 +1,6 @@
 #!/bin/sh
-pacman -Qe > packages.txt
 git pull
+pacman -Qe > packages.txt
 git add .
 date=$(date +"%F %T")
 git commit -m "$date"

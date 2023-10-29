@@ -5,8 +5,8 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["hyprland/window", "hyprland/submap"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-center": ["hyprland/window"],
     "modules-right": ["idle_inhibitor", "pulseaudio", "cpu", "memory", "temperature", "clock", "tray"],
     "idle_inhibitor": {
         "format": "{icon}",

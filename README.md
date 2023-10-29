@@ -21,6 +21,7 @@
 
 - ~/.config/nvim/init.lua
 - ~/.config/nvim/lua
+- ~/.vsnip
 
 ## Fonts config
 

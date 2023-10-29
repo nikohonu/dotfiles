@@ -27,6 +27,7 @@ install .bash_profile
 # neovim
 install .config/nvim/init.lua
 install .config/nvim/lua
+install .vsnip
 
 # hyprland
 install .config/hypr
