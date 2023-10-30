@@ -29,7 +29,7 @@ grim 1.4.1-1
 gst-plugin-pipewire 1:0.3.83-1
 heroic-games-launcher-bin 2.9.2-2
 htop 3.2.2-1
-hyprland-git 0.31.0.r27.015664eb-1
+hyprland-git 0.31.0.r55.8e91c038-1
 imagemagick 7.1.1.21-1
 jre-openjdk 21.u35-3
 kde-cli-tools 5.27.9-1
@@ -43,7 +43,7 @@ libpulse 16.1-6
 libreoffice-fresh 7.6.2-3
 linux 6.5.9.arch2-1
 linux-firmware 20230804.7be2766d-2
-lutris 0.5.13-6
+lutris 0.5.14-1
 man-db 2.12.0-1
 mpv 1:0.36.0-1
 mpv-mpris 1.1-1
@@ -65,7 +65,7 @@ pipewire-jack 1:0.3.83-1
 pipewire-pulse 1:0.3.83-1
 polkit-kde-agent 5.27.9-1
 prettier 3.0.3-1
-python-pipx 1.2.0-1
+python-pipx 1.2.1-1
 python-poetry 1.6.1-2
 python-pytorch-opt-cuda 2.0.1-10
 qbittorrent 4.6.0-1
@@ -88,7 +88,7 @@ tmux 3.3_a-7
 torbrowser-launcher 0.3.6-3
 ttc-iosevka 27.3.1-1
 ttf-iosevka-nerd 3.0.2-1
-ungoogled-chromium-bin 118.0.5993.88-1
+ungoogled-chromium-bin 118.0.5993.117-1
 waifu2x-ncnn-vulkan 20220728-2
 waybar 0.9.22-1
 wget 1.21.4-1

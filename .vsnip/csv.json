@@ -1,10 +1,7 @@
 {
   "date": {
     "prefix": ["date"],
-    "body": [
-        "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"
-    ],
+    "body": ["$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE"],
     "description": "Current iso date."
   }
 }
-

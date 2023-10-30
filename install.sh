@@ -11,8 +11,11 @@ install() {
 	ln -s "$path_in" "$path_out"
 }
 
+# yay
+install .config/yay
+
 # scripts
-install scripts 
+install scripts
 
 # emacs
 install .config/emacs/init.el

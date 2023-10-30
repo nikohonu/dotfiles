@@ -1,12 +1,16 @@
 # Niko Honu's dotfiles
 
+## yay
+
+- ~/config/yay
+
 ## Scripts
 
-~/scripts
+- ~/scripts
 
 ## Emacs
 
-~/.config/emacs/init.el
+- ~/.config/emacs/init.el
 
 ## xdg-user-dir
 
