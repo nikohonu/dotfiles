@@ -28,12 +28,10 @@ fd 8.7.1-1
 firefox 119.0-1
 firejail 0.9.72-1
 flatpak 1:1.15.4-1
-fzy 1.0-2
 gamescope 3.12.7-1
 git 2.42.1-1
 github-cli 2.38.0-1
 grim 1.4.1-1
-gst-plugin-pipewire 1:0.3.84-1
 heroic-games-launcher-bin 2.10.0-2
 htop 3.2.2-1
 hyprland-git 0.31.0.r105.29e0a711-1
@@ -66,7 +64,6 @@ ntfs-3g 2022.10.3-1
 nvidia 545.29.02-2
 nwg-look 0.2.4-1
 openssh 9.5p1-1
-pacman-contrib 1.9.1-1
 papirus-icon-theme 20231101-1
 parallel 20231022-1
 pavucontrol 1:5.0+r64+geba9ca6-1
