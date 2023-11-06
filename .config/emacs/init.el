@@ -6,29 +6,15 @@
 ;; (package-refresh-contents)
 
 ;; Download packages
-(setq package-list '(evil org-roam org-roam-ui))
+(setq package-list '(evil org-roam org-roam-ui lsp-mode lsp-ui))
 (dolist (package package-list)
   (unless (package-installed-p package)
     (package-install package)))
-;; (unless (package-installed-p 'evil)
-;;   (package-install 'evil))
 
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
 (setq evil-want-C-i-jump nil)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages '(f evil)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
 (setq org-roam-directory (file-truename "~/documents/org-roam"))
 (setq org-agenda-files '("~/documents/org-roam"))
@@ -45,11 +31,49 @@
 (evil-define-key 'normal 'global (kbd "<leader>i") 'org-roam-node-insert)
 (evil-define-key 'normal 'global (kbd "<leader>a") 'org-agenda)
 (evil-define-key 'normal 'global (kbd "<leader>b") 'org-roam-buffer-toggle)
+(evil-define-key 'normal 'global (kbd "<leader>.") 'find-file)
 
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((python . t)))
+ '((python . t)
+   (eshell . t)))
 
 (setq org-confirm-babel-evaluate  nil)
 org-confirm-babel-evaluate
 (global-visual-line-mode t)
+
+(use-package lsp-mode
+  :config
+  (lsp-register-custom-settings
+   '(("pyls.plugins.pyls_mypy.enabled" t t)
+     ("pyls.plugins.pyls_mypy.live_mode" nil t)
+     ("pyls.plugins.pyls_black.enabled" t t)
+     ("pyls.plugins.pyls_isort.enabled" t t)))
+  :hook
+  ((python-mode . lsp) (rust-mode . lsp)))
+
+(use-package lsp-ui)
+
+(setq inhibit-startup-message t)
+
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :custom ((doom-modeline-height 15)))
+
+(set-face-attribute 'default nil :font "Iosevka Nerd Font" :height 120)
+
+(use-package evil-org
+  :ensure t
+  :after org
+  :hook (org-mode . (lambda () evil-org-mode))
+  :config
+  (require 'evil-org-agenda)
+  (evil-org-agenda-set-keys))
+
+(custom-set-faces
+ '(org-level-1 ((t (:inherit outline-1 :height 1.3))))
+ '(org-level-2 ((t (:inherit outline-2 :height 1.25))))
+ '(org-level-3 ((t (:inherit outline-3 :height 1.2))))
+ '(org-level-4 ((t (:inherit outline-4 :height 1.15))))
+ '(org-level-5 ((t (:inherit outline-5 :height 1.1)))))

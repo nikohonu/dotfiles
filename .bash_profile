@@ -15,13 +15,13 @@ set_path() {
 }
 
 # path
-set_path ~/.cargo/bin ~/.local/bin ~/scripts ~/.scripts ~/.yarn/bin
+set_path ~/.cargo/bin ~/.local/bin ~/scripts ~/.scripts ~/.yarn/bin ~/.config/emacs/bin
 
 # general
 export EDITOR=nvim
 
 # japanese
-export GTK_IM_MODULE=fcitx
+export GTK_IM_MODULE=wayland
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
@@ -33,3 +33,4 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 # wayland
 export MOZ_ENABLE_WAYLAND=1
 export OBSIDIAN_USE_WAYLAND=1
+export ANKI_WAYLAND=1
