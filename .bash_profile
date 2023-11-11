@@ -21,14 +21,9 @@ set_path ~/.cargo/bin ~/.local/bin ~/scripts ~/.scripts ~/.yarn/bin ~/.config/em
 export EDITOR=nvim
 
 # japanese
-export GTK_IM_MODULE=wayland
-export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
-
-# themes
-export QT_QPA_PLATFORMTHEME=qt6ct
 
 # wayland
 export MOZ_ENABLE_WAYLAND=1

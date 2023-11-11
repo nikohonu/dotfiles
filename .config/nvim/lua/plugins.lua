@@ -17,13 +17,15 @@ return require('packer').startup(function(use)
     }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
-        -- or                            , branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    use("mickael-menu/zk-nvim")
     use("tpope/vim-repeat")
     use("ggandor/leap.nvim")
-    -- pyright
-    -- use {'averms/black-nvim', run = ':UpdateRemotePlugins'}
-    -- use {'stsewd/isort.nvim', run = ':UpdateRemotePlugins'}
+    use('3rd/image.nvim')
+    use {
+        'Wansmer/langmapper.nvim',
+        config = function()
+            require('langmapper').setup({ --[[ your config ]] })
+        end,
+    }
 end)

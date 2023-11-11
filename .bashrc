@@ -6,14 +6,19 @@
 [[ $- != *i* ]] && return
 
 # aliases
+alias grep='rg'
 alias ls='exa'
-alias grep='grep --color=auto'
 alias orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
 alias t='termdown'
 alias un7z="7z x"
 alias untar="tar -xfv"
-alias yt-dlp-music="yt-dlp --extract-audio --audio-quality high --embed-thumbnail"
 alias yt-dlp-channel-as-audiobook='yt-dlp --extract-audio --playlist-reverse -o "%(playlist_index)s - %(title)s.%(ext)s" --compat-option playlist-index'
+alias yt-dlp-music="yt-dlp --extract-audio --audio-quality high --embed-thumbnail"
+
+## notes
+alias dreams="nvim ~/documents/dreams.md"
+alias journal="nvim ~/documents/journal.md"
+alias notes="nvim ~/documents/notes.md"
 
 # functions
 roll () {
@@ -22,6 +27,11 @@ roll () {
 
 c () {
     python -c "from math import *; print($1)"
+}
+
+open-md () {
+    pandoc ~/documents/$1.md --standalone --css ~/documents/style.css --toc=true --metadata title="$1" -o /tmp/$1.html
+    xdg-open /tmp/$1.html
 }
 
 # PS1

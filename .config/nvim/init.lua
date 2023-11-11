@@ -1,4 +1,9 @@
 require("plugins")
+-- require("langmap")
+
+-- luarocks
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua;"
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua;"
 
 -- basic confs
 vim.opt.nu = true
@@ -16,12 +21,14 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 -- shortcuts
+local options = { noremap = true, silent = true }
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 vim.keymap.set("n", "<leader>.", vim.cmd.Ex)
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
-vim.keymap.set("n", "<leader><BS>", ":bprevious<CR>")
+vim.keymap.set("n", "<leader><BS>", ":e #<CR>", options)
+vim.keymap.set("n", "<leader>s", ":w<CR>", options)
 
 -- catppuccin
 require("catppuccin").setup({
@@ -39,7 +46,7 @@ local cmp = require("cmp")
 cmp.setup({
     snippet = {
         expand = function(args)
-            vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+            vim.fn["vsnip#anonymous"](args.body)
         end,
     },
     mapping = cmp.mapping.preset.insert({
@@ -59,8 +66,6 @@ cmp.setup({
 
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
--- lsp config start
 
 -- lspconfig.pyright.setup {
 --     capabilities = capabilities
@@ -98,20 +103,9 @@ lspconfig.pylsp.setup {
     }
 }
 
--- lspconfig.marksman.setup {
---     capabilities = capabilities,
--- }
--- lspconfig.zk.setup {
---     capabilities = capabilities,
--- }
-
--- lspconfig.lua_ls.setup {
---     capabilities = capabilities,
--- }
-
--- lspconfig.bashls.setup {
---     capabilities = capabilities,
--- }
+lspconfig.lua_ls.setup {
+    capabilities = capabilities,
+}
 
 vim.api.nvim_create_autocmd('LspAttach', {
     group = vim.api.nvim_create_augroup('UserLspConfig', {}),
@@ -129,7 +123,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
     end,
 })
--- lsp config end
 
 -- Python config for pyright
 -- vim.api.nvim_create_autocmd('FileType', {
@@ -139,6 +132,17 @@ vim.api.nvim_create_autocmd('LspAttach', {
 --         vim.keymap.set("n", "<leader>r", ":LspRestart<CR>")
 --     end,
 -- })
+
+-- markdown
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = "markdown",
+    callback = function()
+        vim.keymap.set("n", "<leader>f", ":!prettier -w %<CR><CR>", options)
+        vim.opt.tabstop = 2
+        vim.opt.softtabstop = 2
+        vim.opt.shiftwidth = 2
+    end,
+})
 
 -- treesitter.lua
 require("nvim-treesitter.configs").setup {
@@ -155,28 +159,11 @@ require("nvim-treesitter.configs").setup {
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>p', builtin.find_files, {})
 
--- zk
-require("zk").setup({
-  -- can be "telescope", "fzf" or "select" (`vim.ui.select`)
-  -- it's recommended to use "telescope" or "fzf"
-  picker = "telescope",
-
-  lsp = {
-    -- `config` is passed to `vim.lsp.start_client(config)`
-    config = {
-      cmd = { "zk", "lsp" },
-      name = "zk",
-      -- on_attach = ...
-      -- etc, see `:h vim.lsp.start_client()`
-    },
-
-    -- automatically attach buffers in a zk notebook that match the given filetypes
-    auto_attach = {
-      enabled = true,
-      filetypes = { "markdown" },
-    },
-  },
-})
-
 -- leap.nvim
 require('leap').add_default_mappings()
+
+-- image.nvim
+require("image").setup()
+
+-- Langmapper
+require('langmapper').automapping({ global = true, buffer = true })
