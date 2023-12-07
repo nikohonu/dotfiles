@@ -13,3 +13,4 @@ install() {
 
 # bash
 install .bashrc
+install .bash_profile

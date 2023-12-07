@@ -26,7 +26,7 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 # yt-dlp
 alias yt-dlp-channel-as-audiobook='yt-dlp --extract-audio --playlist-reverse -o "%(playlist_index)s - %(title)s.%(ext)s" --compat-option playlist-index'
 alias yt-dlp-music="yt-dlp --extract-audio --audio-quality high --embed-thumbnail"
-alias yt-dlp-sub='yt-dlp --write-sub --sub-lang=en,ja'
+alias yt-dlp-sub='yt-dlp --write-sub --sub-lang=en,ja --output "%(upload_date)s-%(title)s.%(ext)s"'
 
 # package manager
 alias orphans='sudo pacman -Qtdq | sudo pacman -Rns -'

@@ -2,3 +2,4 @@
 
 ## Bash
 - ~/.bashrc
+- ~/.bash_profile
