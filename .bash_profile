@@ -50,6 +50,7 @@ export WINEPREFIX="$XDG_DATA_HOME"/wine
 export HISTFILE="${XDG_STATE_HOME}"/bash/history
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/pythonrc"
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 rm -fr ~/.cache/sessions/*
 

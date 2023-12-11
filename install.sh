@@ -14,3 +14,6 @@ install() {
 # bash
 install .bashrc
 install .bash_profile
+
+# fonts
+install .config/fontconfig/conf.d/99-japanese-fonts.conf
