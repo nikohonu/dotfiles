@@ -16,8 +16,8 @@
 (evil-mode 1)
 (setq evil-want-C-i-jump nil)
 
-(setq org-roam-directory (file-truename "~/documents/org-roam"))
-(setq org-agenda-files '("~/documents/org-roam"))
+(setq org-roam-directory (file-truename "~/Documents/Org"))
+(setq org-agenda-files '("~/Documents/Org"))
 (org-roam-db-autosync-mode)
 
 (setq org-roam-mode-sections
@@ -72,8 +72,35 @@ org-confirm-babel-evaluate
   (evil-org-agenda-set-keys))
 
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(org-level-1 ((t (:inherit outline-1 :height 1.3))))
  '(org-level-2 ((t (:inherit outline-2 :height 1.25))))
  '(org-level-3 ((t (:inherit outline-3 :height 1.2))))
  '(org-level-4 ((t (:inherit outline-4 :height 1.15))))
  '(org-level-5 ((t (:inherit outline-5 :height 1.1)))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(languagetool evil-org doom-modeline org-roam-ui lsp-ui evil)))
+
+(use-package languagetool
+  :ensure t
+  :defer t
+  :commands (languagetool-check
+             languagetool-clear-suggestions
+             languagetool-correct-at-point
+             languagetool-correct-buffer
+             languagetool-set-language
+             languagetool-server-mode
+             languagetool-server-start
+             languagetool-server-stop)
+  :config
+  (setq languagetool-java-arguments '("-Dfile.encoding=UTF-8")
+        languagetool-console-command "~/Apps/LanguageTool/languagetool-commandline.jar"
+        languagetool-server-command "~/Apps/LanguageTool/languagetool-server.jar"))
