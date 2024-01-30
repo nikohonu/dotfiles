@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+
 current_path=$(pwd)
 
 install() {
@@ -11,5 +12,11 @@ install() {
 	ln -s "$path_in" "$path_out"
 }
 
-# fonts
+# zsh
+install .p10k.zsh
+install .zprofile
+install .zshenv
+install .zshrc
+
+# font config
 install .config/fontconfig/conf.d/99-japanese-fonts.conf

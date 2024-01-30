@@ -1,12 +1,10 @@
 amd-ucode 20240115.9b6d0b08-1
 anki 23.12.1-1
-ark 23.08.4-1
 aseprite 1.3.2-2
 base 3-2
 base-devel 1-1
 bash-completion 2.11-3
 blender 17:4.0.2-9
-blueman 2.3.5-2
 bluez 5.72-2
 bluez-utils 5.72-2
 btrfs-progs 6.7-1
@@ -88,6 +86,7 @@ ripgrep 14.1.0-1
 rofi 1.7.5-2
 rust 1:1.75.0-2
 rust-analyzer 20240129-1
+shfmt 3.7.0-1
 steam 1.0.0.78-2
 syncthing 1.27.2-1
 taskwarrior-tui 0.25.4-1

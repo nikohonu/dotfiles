@@ -1,12 +1,12 @@
 # Niko Honu's dotfiles
 
-## Bash
-- ~/.bashrc
-- ~/.bash_profile
+## Zsh + Powerlevel10k
 
-# Emacs
-- ~/.config/emacs/init.el
+- ~/.p10k.zsh
+- ~/.zprofile
+- ~/.zshenv
+- ~/.zshrc
 
-## Fonts
+## Font config
+
 - ~/.config/fontconfig/conf.d/99-japanese-fonts.conf
-
