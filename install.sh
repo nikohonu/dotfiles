@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 current_path=$(pwd)
 
 install() {
@@ -10,13 +10,6 @@ install() {
 	mkdir -p $parent_path
 	ln -s "$path_in" "$path_out"
 }
-
-# bash
-install .bashrc
-install .bash_profile
-
-# emacs
-install .config/emacs/init.el
 
 # fonts
 install .config/fontconfig/conf.d/99-japanese-fonts.conf
