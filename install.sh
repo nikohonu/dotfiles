@@ -19,4 +19,8 @@ install .zshenv
 install .zshrc
 
 # font config
+install .config/emacs/config.org
+install .config/emacs/init.el
+
+# font config
 install .config/fontconfig/conf.d/99-japanese-fonts.conf

@@ -4,4 +4,4 @@ export XMODIFIERS=@im=fcitx
 export QT_QPA_PLATFORMTHEME=qt6ct
 export GLFW_IM_MODULE=ibus
 
-export PATH=$HOME/.local/bin:$HOME/scripts:$PATH
+export PATH=$HOME/.local/bin:$HOME/Scripts:$PATH

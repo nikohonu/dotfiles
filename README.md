@@ -7,6 +7,11 @@
 - ~/.zshenv
 - ~/.zshrc
 
+## Emacs
+
+- ~/.config/emacs/config.org
+- ~/.config/emacs/init.el
+
 ## Font config
 
 - ~/.config/fontconfig/conf.d/99-japanese-fonts.conf

@@ -20,12 +20,12 @@ compinit
 
 # aliases
 alias orphans='sudo pacman -Qtdq | sudo pacman -Rns -'
-alias mpv-music='mpv --config-dir=music/mpv'
 alias clear="printf '\033[2J\033[3J\033[1;1H'"
 
 # working with archives
 alias un7z="7z x"
 alias untar="tar -xfv"
+alias unzip_jp="unzip -O shift-jis"
 
 # yt-dlp
 alias yt-dlp-channel-as-audiobook='yt-dlp --extract-audio --playlist-reverse -o "%(playlist_index)s - %(title)s.%(ext)s" --compat-option playlist-index'
