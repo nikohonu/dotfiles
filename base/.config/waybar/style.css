@@ -1,0 +1,77 @@
+@define-color background #1a1c2c;
+@define-color foreground #f4f4f4;
+@define-color accent #29366f;
+@define-color red #b13e53;
+
+* {
+  font-family: Iosevka Nerd Font;
+  font-size: 16px;
+}
+
+window#waybar {
+  background: @accent;
+  color: @foreground;
+}
+
+.modules-left,
+.modules-right {
+  background: @background;
+}
+
+#tags button {
+  border-radius: 0;
+  padding: 2px;
+  /* background-image: url("/home/niko/downloads/media-244547933.jpg"); */
+  /* background-size: contain; */
+  /* background-repeat: no-repeat */
+}
+
+#tags button.occupied {
+  color: @foreground;
+}
+
+#tags button.focused {
+  color: @foreground;
+  background: @accent;
+}
+
+#idle_inhibitor.activated {
+  color: @red;
+}
+
+#tray {
+  margin-left: -4px;
+  margin-right: 8px;
+  /* padding-bottom: 2px; */
+}
+
+/* Remove hover effect */
+#tags button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  background: none;
+  transition: none;
+  border-color: rgba(0, 0, 0, 0);
+}
+
+#mode {
+  padding-right: 8px;
+}
+
+#idle_inhibitor {
+  padding-left: 8px;
+  padding-right: 8px;
+  border-right: 1px solid @foreground;
+}
+
+#pulseaudio,
+#cpu,
+#memory,
+#clock {
+  padding-right: 8px;
+  border-right: 1px solid @foreground;
+}
+
+#tray {
+    padding-left: 8px
+}

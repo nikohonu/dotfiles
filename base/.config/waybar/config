@@ -1,0 +1,39 @@
+{
+    "layer": "top",
+    "modules-left": ["river/tags", "river/layout", "river/mode"],
+    "modules-center": ["river/window"],
+    "modules-right": ["idle_inhibitor", "pulseaudio", "cpu", "memory", "clock", "tray"],
+    "spacing": 6,
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": {
+            "default": "VOL:"
+        },
+        "on-click": "pavucontrol"
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "CPU: {usage}%",
+        "on-click": "alacritty -e htop"
+    },
+    "memory": {
+        "interval": 10,
+        "format": "RAM: {percentage}%",
+        "on-click": "alacritty -e htop"
+    },
+    "clock": {
+        "interval": 1,
+        "format": "DT: {:%F %A %T}",
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 4
+    }
+}

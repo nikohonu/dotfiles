@@ -18,9 +18,9 @@ export QT_IM_MODULE=fcitx
 export SDL_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
 # export HF_HUB_ENABLE_HF_TRANSFER=1
-# export SDL_VIDEODRIVER=wayland
+export SDL_VIDEODRIVER=wayland
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-    exec startx
+    exec startw
 fi
 
