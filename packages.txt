@@ -20,7 +20,6 @@ fcitx5
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
-filtile-git
 flatpak
 gamescope
 git
@@ -35,7 +34,6 @@ jre-openjdk
 kanshi
 keepassxc
 koboldcpp-cuda
-koboldcpp-cuda-debug
 krita
 kvantum
 kvantum-qt5
@@ -44,7 +42,6 @@ lib32-nvidia-utils-beta
 lib32-pipewire
 libreoffice-fresh
 librewolf-bin
-librewolf-bin-debug
 linux
 linux-firmware
 linux-headers
@@ -93,20 +90,18 @@ steam
 stow
 strawberry
 swaybg
+swayidle
 swaylock
 syncthing
 telegram-desktop
 termdown
 thunar
-thunar-archive-plugin
-thunar-volman
 thunderbird
 torbrowser-launcher
 transformers_ocr
 tree
 ttf-iosevka-nerd
 waybar
-wayland-protocols
 wget
 wireplumber
 wl-clipboard
@@ -115,11 +110,7 @@ wofi
 xdg-desktop-portal-gtk
 xdg-desktop-portal-wlr
 xdg-user-dirs
-xdg-user-dirs-gtk
 xfce4-terminal
-xorg-server
-xorg-xinit
-xss-lock
 yay
 yt-dlp
 zsh
