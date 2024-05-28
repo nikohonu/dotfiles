@@ -4,6 +4,10 @@
     "modules-center": [],
     "modules-right": ["idle_inhibitor", "pulseaudio", "cpu", "memory", "clock", "tray"],
     "spacing": 0,
+    "hyprland/submap": {
+        "default-submap": "DEFAULT",
+        "always-on": true
+    },
     "hyprland/window": {
         "max-length": 300
     },
@@ -38,9 +42,5 @@
     "tray": {
         "icon-size": 18,
         "spacing": 4
-    },
-    "hyprland/submap": {
-        "default-submap": "DEFAULT",
-        "always-on": true
     }
 }
