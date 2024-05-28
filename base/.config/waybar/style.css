@@ -1,7 +1,7 @@
-@define-color background #1a1c2c;
-@define-color foreground #f4f4f4;
-@define-color accent #29366f;
-@define-color red #b13e53;
+@define-color background #140f0c;
+@define-color foreground #bfbfbf;
+@define-color accent #4b0d11;
+@define-color red #860104;
 
 * {
   font-family: Iosevka Nerd Font;
@@ -13,12 +13,19 @@ window#waybar {
   color: @foreground;
 }
 
+#window {
+  background: @accent;
+  color: @foreground;
+  padding-left: 8px;
+}
+
 .modules-left,
 .modules-right {
   background: @background;
 }
 
-#tags button {
+#workspaces button {
+  color: @foreground;
   border-radius: 0;
   padding: 2px;
   /* background-image: url("/home/niko/downloads/media-244547933.jpg"); */
@@ -26,11 +33,7 @@ window#waybar {
   /* background-repeat: no-repeat */
 }
 
-#tags button.occupied {
-  color: @foreground;
-}
-
-#tags button.focused {
+#workspaces button.active {
   color: @foreground;
   background: @accent;
 }
@@ -46,15 +49,17 @@ window#waybar {
 }
 
 /* Remove hover effect */
-#tags button:hover {
+#workspaces button:hover {
   box-shadow: none;
   text-shadow: none;
   background: none;
   transition: none;
   border-color: rgba(0, 0, 0, 0);
+  color: @foreground;
+  background: @red;
 }
 
-#mode {
+#submap {
   padding-right: 8px;
 }
 

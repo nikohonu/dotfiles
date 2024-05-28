@@ -1,9 +1,12 @@
 {
     "layer": "top",
-    "modules-left": ["river/tags", "river/layout", "river/mode"],
-    "modules-center": ["river/window"],
+    "modules-left": ["hyprland/workspaces", "hyprland/submap", "hyprland/window"],
+    "modules-center": [],
     "modules-right": ["idle_inhibitor", "pulseaudio", "cpu", "memory", "clock", "tray"],
     "spacing": 6,
+    "hyprland/window": {
+        "max-length": 300
+    },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {

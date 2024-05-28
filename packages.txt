@@ -22,11 +22,15 @@ fcitx5-gtk
 fcitx5-mozc
 flatpak
 gamescope
+gcr
 git
 godot
 grim
 htop
 hydrus
+hypridle
+hyprland-git
+hyprpaper
 icoutils
 imagemagick
 jdk17-openjdk
@@ -50,6 +54,7 @@ luarocks
 lutris
 maim
 man-db
+minetest
 mpv
 mpv-mpris
 ncdu
@@ -82,6 +87,7 @@ qt6ct
 ripgrep
 river
 rofi
+rose-pine-hyprcursor
 rust
 rust-analyzer
 scons
@@ -89,8 +95,6 @@ sqlitebrowser
 steam
 stow
 strawberry
-swaybg
-swayidle
 swaylock
 syncthing
 telegram-desktop
@@ -102,13 +106,14 @@ transformers_ocr
 tree
 ttf-iosevka-nerd
 waybar
+wayland-pipewire-idle-inhibit
 wget
 wireplumber
 wl-clipboard
 wlroots-nvidia
 wofi
 xdg-desktop-portal-gtk
-xdg-desktop-portal-wlr
+xdg-desktop-portal-hyprland
 xdg-user-dirs
 xfce4-terminal
 yay

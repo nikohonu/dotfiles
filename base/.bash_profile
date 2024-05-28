@@ -12,7 +12,7 @@ export EDITOR=nvim
 export ANDROID_HOME=~/apps/sdk
 
 export QT_QPA_PLATFORMTHEME=qt6ct
-export GTK_IM_MODULE=fcitx
+# export GTK_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 export SDL_IM_MODULE=fcitx
@@ -21,6 +21,6 @@ export GLFW_IM_MODULE=ibus
 export SDL_VIDEODRIVER=wayland
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-    exec startw
+    Hyprland
 fi
 
