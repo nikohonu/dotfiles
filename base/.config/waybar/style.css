@@ -61,6 +61,7 @@ window#waybar {
 
 #submap {
   padding-right: 8px;
+  padding-left: 8px;
 }
 
 #idle_inhibitor {
@@ -74,6 +75,7 @@ window#waybar {
 #memory,
 #clock {
   padding-right: 8px;
+  padding-left: 8px;
   border-right: 1px solid @foreground;
 }
 
