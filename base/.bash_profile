@@ -21,6 +21,6 @@ export GLFW_IM_MODULE=ibus
 export SDL_VIDEODRIVER=wayland
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-    Hyprland
+    exec Hyprland
 fi
 

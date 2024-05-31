@@ -9,7 +9,8 @@
         "always-on": true
     },
     "hyprland/window": {
-        "max-length": 300
+        "max-length": 300,
+        "icon": true
     },
     "idle_inhibitor": {
         "format": "{icon}",

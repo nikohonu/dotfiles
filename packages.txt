@@ -30,6 +30,8 @@ htop
 hydrus
 hypridle
 hyprland-git
+hyprlock-git
+hyprlock-git-debug
 hyprpaper
 icoutils
 imagemagick
@@ -115,7 +117,6 @@ wofi
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
-xfce4-terminal
 yay
 yt-dlp
 zsh
