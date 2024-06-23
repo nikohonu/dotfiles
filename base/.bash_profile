@@ -5,7 +5,7 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
 
-export PATH=$PATH:~/scripts:~/.local/bin/:~/.cargo/bin:~/apps/cmdline-tools/bin
+export PATH=$PATH:~/scripts:~/.local/bin/:~/.cargo/bin:~/apps/cmdline-tools/bin:~/.config/emacs/bin
 
 export EDITOR=nvim
 

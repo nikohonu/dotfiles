@@ -14,11 +14,13 @@ dkms
 dolphin
 dolphin-plugins
 efibootmgr
+emacs-nativecomp
 fastfetch
 fcitx5
 fcitx5-configtool
 fcitx5-gtk
 fcitx5-mozc
+fd
 flatpak
 gamescope
 gcr
@@ -78,6 +80,7 @@ qbittorrent
 ripgrep
 rust-analyzer
 scons
+shellcheck
 sox
 spectacle
 sqlitebrowser
