@@ -22,7 +22,6 @@ fcitx5-gtk
 fcitx5-mozc
 fd
 flatpak
-gamescope
 gcr
 git
 godot
@@ -50,6 +49,7 @@ linux-headers
 lua-language-server
 lutris
 man-db
+mecab-ipadic
 mpv
 mpv-mpris
 ncdu
