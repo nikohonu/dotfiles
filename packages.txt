@@ -47,12 +47,14 @@ linux
 linux-firmware
 linux-headers
 lua-language-server
+luarocks
 lutris
 man-db
 mecab-ipadic
 mpv
 mpv-mpris
 ncdu
+neovide
 neovim
 networkmanager
 noto-fonts
@@ -95,6 +97,8 @@ thunderbird
 transformers_ocr
 tree
 ttf-iosevka-nerd
+ueberzugpp
+ueberzugpp-debug
 wget
 wireplumber
 wl-clipboard
