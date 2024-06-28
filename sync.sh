@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 git pull
-pacman -Qqe >packages.txt
+./pacman.sh
 git add packages.txt
 git add .
 date=$(date +"%F %T")

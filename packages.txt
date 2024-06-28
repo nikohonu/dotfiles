@@ -1,6 +1,6 @@
 amd-ucode
 android-tools
-antimicrox
+anki
 ark
 base
 base-devel
@@ -10,11 +10,9 @@ bluez-utils
 btrfs-progs
 calibre
 cmake
-dkms
 dolphin
 dolphin-plugins
 efibootmgr
-emacs-nativecomp
 fastfetch
 fcitx5
 fcitx5-configtool
@@ -35,11 +33,9 @@ jre-openjdk
 kate
 kdeconnect
 keepassxc
-koboldcpp-cuda
 krita
 kwalletmanager
 lf
-lib32-nvidia-utils-beta
 lib32-pipewire
 libreoffice-fresh
 librewolf-bin
@@ -50,7 +46,6 @@ lua-language-server
 luarocks
 lutris
 man-db
-mecab-ipadic
 mpv
 mpv-mpris
 ncdu
@@ -60,8 +55,6 @@ networkmanager
 noto-fonts
 npm
 nsxiv
-nvidia-beta-dkms
-nvidia-settings
 obsidian
 pacman-contrib
 parallel
@@ -77,13 +70,11 @@ prettier
 pyside6
 python-pipx
 python-poetry
-python-pytorch-opt-cuda
 qbittorrent
 ripgrep
 rust-analyzer
 scons
 shellcheck
-sox
 spectacle
 sqlitebrowser
 steam
@@ -97,8 +88,6 @@ thunderbird
 transformers_ocr
 tree
 ttf-iosevka-nerd
-ueberzugpp
-ueberzugpp-debug
 wget
 wireplumber
 wl-clipboard
