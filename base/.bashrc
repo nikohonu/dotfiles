@@ -24,6 +24,7 @@ alias yt-dlp-sub='yt-dlp --write-sub --write-auto-subs --sub-lang=en,ja --output
 alias yt-dlp-playlist-audio='yt-dlp --output "%(upload_date)s-%(title)s.%(ext)s" --extract-audio'
 alias yt-dlp-playlist='yt-dlp --output "%(upload_date)s-%(title)s.%(ext)s"'
 alias yt-dlp-720p="yt-dlp -f 'bestvideo[height<=720]+bestaudio/best[height<=720]'"
+alias yt-dlp-720p-playlist="yt-dlp -f 'bestvideo[height<=720]+bestaudio/best[height<=720]' -o '%(playlist_index)s - %(title)s.%(ext)s'"
 
 # other
 alias lute="~/.venv/bin/python -m lute.main"
@@ -41,6 +42,9 @@ c () {
 }
 split-video() {
     ffmpeg -i "$1" -c copy -map 0 -segment_time 00:$2:00 -f segment -reset_timestamps 1 "${1%.*}%03d.${1##*.}"
+}
+icon-extract() {
+    wrestool -x -t 14 "$1" > output.ico; magick convert output.ico output.png; rm output.ico 
 }
 
 PS1='[\u@\h \W]\$ '

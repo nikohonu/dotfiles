@@ -1,1 +1,1 @@
-require("nikohonu")
+require("config")
