@@ -15,6 +15,7 @@ return {
 		local lspconfig = require("lspconfig")
 
 		local servers = {
+			mesonlsp = true,
 			bashls = true,
 			lua_ls = true,
 			rust_analyzer = true,
@@ -40,7 +41,7 @@ return {
 				},
 				settings = {
 					ltex = {
-						language = "en-GB",
+						language = "en-US",
 					},
 				},
 			},
