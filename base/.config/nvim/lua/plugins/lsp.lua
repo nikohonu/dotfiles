@@ -24,6 +24,7 @@ return {
 			clangd = true,
 			basedpyright = true,
 			marksman = true,
+			ts_ls = true,
 			ltex = {
 				filetypes = {
 					"bib",
@@ -60,6 +61,7 @@ return {
 				"rust_analyzer",
 				"gdtoolkit",
 				"prettier",
+				"typescript-language-server"
 			},
 		})
 

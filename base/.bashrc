@@ -46,6 +46,12 @@ split-video() {
 icon-extract() {
     wrestool -x -t 14 "$1" > output.ico; magick convert output.ico output.png; rm output.ico 
 }
+sub-clear() {
+    ffmpeg -i "$1" tmp.srt
+    srt process -m re -f 'lambda sub: re.sub("<[^<]+?>", "", sub)' -i tmp.srt -o "${1%.mkv}.en.srt"
+    rm tmp.srt
+}
+
 
 PS1='[\u@\h \W]\$ '
 
@@ -53,3 +59,7 @@ PS1='[\u@\h \W]\$ '
 source ~/.local/share/bash-completion/mashiro-task.bash
 
 # fastfetch
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH

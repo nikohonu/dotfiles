@@ -16,7 +16,7 @@ return {
 			python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 			markdown = { "prettier" },
 			css = { "prettier" },
-			html = {"prettier"},
+			html = { "prettier" },
 		},
 		default_format_opts = {
 			lsp_format = "fallback",

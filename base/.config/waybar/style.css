@@ -1,58 +1,39 @@
-@define-color background #140f0c;
-@define-color foreground #bfbfbf;
-@define-color accent #4b0d11;
-@define-color red #860104;
+@define-color background black;
+@define-color foreground white;
+@define-color inactive gray;
 
 * {
-  font-family: Iosevka Nerd Font;
-  font-size: 16px;
+  font-size: 14px;
+  padding: 0px;
+  border-radius: 0;
+  font-family:
+    FontAwesome,
+    Iosevka Nerd Font;
 }
 
 window#waybar {
-  background: @accent;
+  background-color: @background;
   color: @foreground;
-}
-
-#window {
-  background: @accent;
-  color: @foreground;
-  padding: 0 8px 0 8px;
-}
-
-.modules-left,
-.modules-right {
-  background: @background;
 }
 
 #workspaces button {
-  color: @foreground;
-  border-radius: 0;
-  padding: 0 2px 0 2px;
+  color: @inactive;
 }
 
 #workspaces button.active {
   color: @foreground;
-  background: @accent;
 }
 
-/* remove hover effect */
 #workspaces button:hover {
-  box-shadow: none;
-  text-shadow: none;
-  background: none;
   transition: none;
-  border-color: rgba(0, 0, 0, 0);
-  color: @foreground;
-  background: @red;
-}
-
-#submap {
-  padding: 0 8px 0 8px;
+  border-color: @foreground;
+  color: @background;
 }
 
 #idle_inhibitor,
 #pulseaudio,
 #cpu,
+#custom-vram,
 #memory,
 #clock {
   padding: 0 8px 0 8px;
@@ -60,7 +41,11 @@ window#waybar {
 }
 
 #idle_inhibitor.activated {
-  color: @red;
+  color: red;
+}
+
+#idle_inhibitor {
+  padding-right: 14px;
 }
 
 #tray {
