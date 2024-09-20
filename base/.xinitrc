@@ -1,19 +1,24 @@
 #!/usr/bin/env sh
 
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
-    for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-        [ -x "$f" ] && . "$f"
-    done
-    unset f
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
 fi
 
-# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# xdg autostart
+dex -a &
 
-# dunst &
-# dwmblocks &
-# ~/.fehbg &
+# programs autostart
+dunst &
+playerctld &
 
-dex -a
-playerctld daemon &
-idle.sh &
-exec awesome
+# scripts autostart
+bar.sh &
+
+# scripts autostart (full path)
+~/.fehbg
+
+# run dwm
+exec dwm.sh

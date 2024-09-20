@@ -5,7 +5,7 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 [[ -f ~/.private ]] && . ~/.private
 
-export PATH=$PATH:~/scripts:~/.local/bin/:~/.cargo/bin:/home/nue/apps/flutter/bin/
+export PATH=$PATH:~/bin:~/.local/bin/:~/.cargo/bin:~/apps/flutter/bin/
 
 export EDITOR=nvim
 
@@ -19,9 +19,16 @@ export EDITOR=nvim
 # export GLFW_IM_MODULE=ibus
 # export HF_HUB_ENABLE_HF_TRANSFER=1
 # export SDL_VIDEO_DRIVER=wayland # this like broke steam, fuck
-#export ELECTRON_OZONE_PLATFORM_HINT=auto
+# export ELECTRON_OZONE_PLATFORM_HINT=auto
 
-# if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-#     exec Hyprland
-# fi
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export GLFW_IM_MODULE=ibus
+
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+  exec startx
+fi
+
 
