@@ -1,5 +1,6 @@
 require("config.maps")
 require("config.lazy")
+require("config.autocmds")
 
 vim.opt.mouse = 'a'
 vim.opt.tabstop = 4
@@ -12,4 +13,3 @@ vim.opt.undodir = os.getenv("HOME") .. "/.local/share/nvim/undodir"
 vim.opt.undofile = true
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
-

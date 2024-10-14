@@ -7,18 +7,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# xdg autostart
-dex -a &
-
-# programs autostart
 dunst &
-playerctld &
-
-# scripts autostart
-bar.sh &
-
-# scripts autostart (full path)
-~/.fehbg
-
-# run dwm
-exec dwm.sh
+dex -a &
+xset s off
+exec dwm

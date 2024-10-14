@@ -5,9 +5,11 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 [[ -f ~/.private ]] && . ~/.private
 
-export PATH=$PATH:~/bin:~/.local/bin/:~/.cargo/bin:~/apps/flutter/bin/
+export PATH=~/bin:~/.local/bin/:~/.cargo/bin:~/apps/flutter/bin/:~./node_modules/.bin:$PATH
 
 export EDITOR=nvim
+
+export TERMINAL=foot
 
 # export ANDROID_HOME=~/apps/sdk
 
@@ -21,14 +23,17 @@ export EDITOR=nvim
 # export SDL_VIDEO_DRIVER=wayland # this like broke steam, fuck
 # export ELECTRON_OZONE_PLATFORM_HINT=auto
 
-export XMODIFIERS=@im=fcitx
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export SDL_IM_MODULE=fcitx
-export GLFW_IM_MODULE=ibus
 
 if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-  exec startx
+  exec Hyprland
 fi
-
-
+#
+# if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
+#   export XMODIFIERS=@im=fcitx
+#   export GTK_IM_MODULE=fcitx
+#   export QT_IM_MODULE=fcitx
+#   export SDL_IM_MODULE=fcitx
+#   export GLFW_IM_MODULE=ibus
+#   exec startx
+# fi
+#

@@ -17,6 +17,8 @@ return {
 			markdown = { "prettier" },
 			css = { "prettier" },
 			html = { "prettier" },
+			xml = { "xmllint" },
+			toml = {"taplo"}
 		},
 		default_format_opts = {
 			lsp_format = "fallback",

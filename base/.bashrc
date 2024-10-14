@@ -14,7 +14,7 @@ alias clear="printf '\033[2J\033[3J\033[1;1H'"
 
 # working with archives
 alias un7z="7z x"
-alias untar="tar -xfv"
+alias untargz="tar -xvzf"
 alias unzip_jp="unzip -O shift-jis"
 
 # yt-dlp
@@ -59,5 +59,6 @@ sub-clear() {
 
 PS1='[\u@\h \W]\$ '
 
-# custom completions
-source ~/.local/share/bash-completion/mashiro-task.bash
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
