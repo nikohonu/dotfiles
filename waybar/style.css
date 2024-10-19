@@ -1,0 +1,92 @@
+@define-color active-foreground rgb(239, 241, 245);
+@define-color background rgb(239, 241, 245);
+@define-color button-active rgb(136, 57, 239);
+@define-color foreground rgb(76, 79, 105);
+@define-color window-background rgb(244, 184, 228);
+
+@define-color bluetooth rgb(30, 102, 245);
+@define-color idle_inhibitor rgb(136, 57, 239);
+@define-color mpris rgb(220, 138, 120);
+@define-color privacy rgb(76, 79, 105);
+
+* {
+  font-family: Iosevka Nerd Font;
+  font-size: 14px;
+  border-radius: 0;
+  padding: 0;
+}
+
+window#waybar {
+  color: @foreground;
+  background-color: @window-background;
+}
+
+/* Workspaces */
+button {
+  color: @foreground;
+  background-color: @background;
+  border: none;
+  margin: 4px 2px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+button.active {
+  color: @active-foreground;
+  background-color: @button-active;
+}
+
+button:hover {
+  transition: 0;
+  color: @active-foreground;
+  background-color: @button-active;
+  background-image: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+}
+
+/* Modules */
+#bluetooth,
+#idle_inhibitor,
+#mpris,
+#privacy,
+#memory,
+#wireplumber,
+#clock,
+#tray,
+#custom-audio_idle_inhibitor {
+  color: @foreground;
+  background-color: @background;
+  margin: 4px 2px;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+/* Active modules */
+#bluetooth.connected,
+#idle_inhibitor.activated,
+#mpris.playing,
+#privacy,
+#custom-audio_idle_inhibitor.output {
+  color: @enabled;
+}
+
+#bluetooth.connected {
+  background-color: @bluetooth;
+}
+
+#idle_inhibitor.activated {
+  background-color: @idle_inhibitor;
+}
+
+#mpris.playing {
+  background-color: @mpris;
+}
+
+#privacy {
+  background-color: @privacy;
+}
+
+#custom-audio_idle_inhibitor {
+  background-color: @idle_inhibitor;
+}

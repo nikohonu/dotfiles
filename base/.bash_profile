@@ -9,7 +9,7 @@ export PATH=~/bin:~/.local/bin/:~/.cargo/bin:~/apps/flutter/bin/:~./node_modules
 
 export EDITOR=nvim
 
-export TERMINAL=foot
+# export TERMINAL=foot
 
 # export ANDROID_HOME=~/apps/sdk
 
@@ -24,9 +24,9 @@ export TERMINAL=foot
 # export ELECTRON_OZONE_PLATFORM_HINT=auto
 
 
-if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-  exec Hyprland
-fi
+# if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+#   exec Hyprland
+# fi
 #
 # if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 3 ]; then
 #   export XMODIFIERS=@im=fcitx

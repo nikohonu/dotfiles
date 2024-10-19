@@ -1,0 +1,106 @@
+// -*- mode: jsonc -*-
+{
+	"spacing": 4,
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/submap",
+		"hyprland/window"
+	],
+	"modules-right": [
+		"mpris",
+		"bluetooth",
+		"idle_inhibitor",
+		"custom/audio_idle_inhibitor",
+		"privacy",
+		"memory",
+		"wireplumber",
+		"clock",
+		"tray"
+	],
+	"hyprland/window": {
+		"max-length": 64
+	},
+	"bluetooth": {
+		"format": "",
+		"tooltip-format-connected": "{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+		"on-click": "headphones.bash connect",
+		"on-click-right": "headphones.bash disconnect"
+	},
+	"idle_inhibitor": {
+		"format": "󰈈 "
+	},
+	"mpris": {
+		"format": "{player_icon} {dynamic}",
+		"format-paused": "{status_icon} {dynamic}",
+		"interval": 1,
+		"artist-len": 32,
+		"title-len": 32,
+		"dynamic-order": [
+			"position",
+			"length",
+			"artist",
+			"title"
+		],
+		"dynamic-importance-order": [
+			"position",
+			"length",
+			"artist",
+			"title"
+		],
+		"player-icons": {
+			"default": "▶"
+		},
+		"status-icons": {
+			"paused": "⏸"
+		}
+	},
+	"memory": {
+		"format": "   {used:0.1f}G/{total:0.1f}G"
+	},
+	"wireplumber": {
+		"format": "   {volume}%"
+	},
+	"clock": {
+		"format": "   {:%F %A %H:%M:%S}",
+		"interval": 1,
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"mode": "month",
+			"mode-mon-col": 3,
+			"weeks-pos": "right",
+			"on-scroll": 1,
+			"format": {
+				"months": "<span color='#ffead3'><b>{}</b></span>",
+				"days": "<span color='#ecc6d9'><b>{}</b></span>",
+				"weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+				"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+				"today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+			}
+		},
+		"actions": {
+			"on-click-right": "mode",
+			"on-scroll-up": "tz_up",
+			"on-scroll-down": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
+	},
+	"tray": {
+		"icon-size": 18,
+		"spacing": 4
+	},
+	"custom/audio_idle_inhibitor": {
+		"format": "{icon}",
+		"exec": "sway-audio-idle-inhibit --dry-print-both-waybar",
+		"exec-if": "which sway-audio-idle-inhibit",
+		"return-type": "json",
+		"format-icons": {
+			"output": " ",
+			"input": "",
+			"output-input": "  ",
+			"none": ""
+		}
+	}
+}
