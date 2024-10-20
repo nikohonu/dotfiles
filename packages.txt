@@ -26,6 +26,7 @@ gallery-dl
 gcr
 git
 glfw
+glow
 gst-libav
 gst-plugin-pipewire
 gwenview
@@ -87,10 +88,12 @@ unzip
 wayland-pipewire-idle-inhibit
 wget
 wine-mono
+winetricks
 wireplumber
 wl-clipboard
 xcb-imdkit
 xdg-desktop-portal-gtk
+xdg-ninja
 yay
 yazi
 yt-dlp
