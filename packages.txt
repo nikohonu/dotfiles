@@ -26,6 +26,7 @@ gallery-dl
 gcr
 git
 glfw
+glm
 glow
 gst-libav
 gst-plugin-pipewire
@@ -81,10 +82,16 @@ syncthing
 telegram-desktop
 termdown
 thunderbird
+tmux
 transformers_ocr
 ttf-iosevka-nerd
 ttf-vlgothic
 unzip
+vulkan-extra-layers
+vulkan-extra-tools
+vulkan-html-docs
+vulkan-utility-libraries
+vulkan-validation-layers
 wayland-pipewire-idle-inhibit
 wget
 wine-mono
