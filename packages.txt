@@ -13,6 +13,7 @@ dkms
 dolphin
 dwarffortress
 efibootmgr
+factorio-yafc-ce-git
 fastfetch
 fcitx5
 fcitx5-gtk
