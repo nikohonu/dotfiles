@@ -40,6 +40,8 @@ icoutils
 imagemagick
 impd-git
 jre-openjdk
+kate
+kdeconnect
 keepassxc
 konsole
 lf
@@ -62,6 +64,7 @@ mpdscribble
 mpv-mpris
 ncdu
 ncmpcpp
+neovide
 neovim
 networkmanager
 npm
