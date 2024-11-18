@@ -5,6 +5,8 @@ mkdir ~/.config
 mkdir ~/.config/zsh
 mkdir ~/.config/zsh/env
 mkdir ~/.config/tmux
+mkdir ~/.local
+mkdir ~/.local/share
 
 # stow
 stow arch
@@ -13,3 +15,4 @@ stow git
 stow nvim
 stow tmux
 stow zsh
+stow kde
