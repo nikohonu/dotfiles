@@ -28,6 +28,7 @@ flatpak
 gallery-dl
 gcr
 git
+gitea
 glfw
 glm
 glow
@@ -83,6 +84,7 @@ raylib
 ripgrep
 rustup
 spectacle
+sqlitebrowser
 steam
 stow
 syncthing
