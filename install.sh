@@ -2,9 +2,10 @@
 
 # Create dirs
 mkdir ~/.config
+mkdir ~/.config/nvim
+mkdir ~/.config/tmux
 mkdir ~/.config/zsh
 mkdir ~/.config/zsh/env
-mkdir ~/.config/tmux
 mkdir ~/.local
 mkdir ~/.local/share
 
