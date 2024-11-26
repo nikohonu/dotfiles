@@ -14,6 +14,7 @@ return {
 			"godot_resource",
 			"gdshader",
 			"json",
+			"glsl",
 		},
 		sync_install = false,
 		auto_install = true,

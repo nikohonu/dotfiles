@@ -18,7 +18,7 @@ return {
 			basedpyright = true,
 			bashls = true,
 			clangd = true,
-			glsl_analyzer = { filetypes = { "glsl", "vert", "tesc", "tese", "frag", "geom", "comp" } },
+			glsl_analyzer = { filetypes = { "glsl", "vert", "tesc", "tese", "frag", "geom", "comp", "fs", "vs" } },
 			jsonls = true,
 			lua_ls = true,
 			marksman = true,
