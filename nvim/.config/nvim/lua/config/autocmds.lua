@@ -12,8 +12,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = "*.glsl",
+    pattern = {"*.frag", "*.vert"},
     callback = function()
+        vim.cmd("setfiletype glsl");
         vim.cmd("TSEnable highlight");
     end,
 })
+
