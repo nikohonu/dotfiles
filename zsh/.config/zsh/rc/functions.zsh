@@ -16,3 +16,10 @@ icon-extract() {
     wrestool -x -t 14 "$1" > output.ico; magick convert output.ico output.png; rm output.ico 
 }
 
+mtdn() {
+    mashiro-task done $1; mashiro-task now 100
+}
+
+mtn() {
+    mashiro-task now 100
+}
