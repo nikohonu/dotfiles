@@ -14,9 +14,14 @@ return {
 		local cmp = require("cmp")
 		local lspkind = require("lspkind")
 		lspkind.init({})
-		require("luasnip")
+		local luasnip = require("luasnip")
 		require("luasnip.loaders.from_vscode").lazy_load()
 		cmp.setup({
+			snippet = {
+				expand = function(args)
+					luasnip.lsp_expand(args.body) -- For `luasnip` users.
+				end
+			},
 			completion = {
 				completeopt = "menu,menuone,noselect",
 			},
@@ -37,6 +42,22 @@ return {
 					}),
 					{ "i", "c" }
 				),
+				["<Tab>"] = cmp.mapping(function(fallback)
+					if luasnip.locally_jumpable(1) then
+						luasnip.jump(1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+
+				["<S-Tab>"] = cmp.mapping(function(fallback)
+					if luasnip.locally_jumpable(-1) then
+						luasnip.jump(-1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+
 			},
 			formatting = {
 				format = lspkind.cmp_format({
