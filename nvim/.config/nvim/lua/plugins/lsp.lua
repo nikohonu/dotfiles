@@ -48,6 +48,7 @@ return {
 				},
 			},
 			zls = true,
+			qmlls = true,
 		}
 
 		require("mason").setup()
